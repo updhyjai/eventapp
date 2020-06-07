@@ -28,7 +28,7 @@
       "csv": "Some CSV link for Super Jewels Quest",
       "report": "Some report link for Super Jewels Ques",
       "image_url": "http://localhost:3001/events/Bitmap2.png",
-      "date": "Mon Jun 08 2020"
+      "date": "06-06-2020"
     },
     {
       "id": 3,
@@ -43,7 +43,7 @@
       "csv": "Some CSV link for Mole Slayer",
       "report": "Some report link for Mole Slayer",
       "image_url": "http://localhost:3001/events/Bitmap3.png",
-      "date": "Wed Jun 03 2020"
+      "date": "07-06-2020"
     },
     {
       "id": 4,
@@ -58,7 +58,7 @@
       "csv": "Some CSV link for Mancala Mix",
       "report": "Some report link for Mancala Mix",
       "image_url": "http://localhost:3001/events/Bitmap4.png",
-      "date": "Thu Jun 11 2020"
+      "date": "04-06-2020"
     }
   ]
 }

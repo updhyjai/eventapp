@@ -40,19 +40,19 @@ server.use(function (req, res, next) {
   next();
 });
 
-// Simulate delay on all requests
-server.use(function (req, res, next) {
-  setTimeout(next, 2000);
-});
+// // Simulate delay on all requests
+// server.use(function (req, res, next) {
+//   setTimeout(next, 2000);
+// });
 
-// Declaring custom routes below. Add custom routes before JSON Server router
+// server.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "public", "index.html"));
+// });
 
-// Add createdAt to all POSTS
 server.use((req, res, next) => {
   if (req.method === "POST") {
     req.body.createdAt = Date.now();
   }
-  // Continue to JSON Server router
   next();
 });
 
@@ -62,7 +62,6 @@ server.post("/events/", function (req, res, next) {
   if (error) {
     res.status(400).send(error);
   } else {
-    req.body.slug = createSlug(req.body.name); // Generate a slug for new event.
     next();
   }
 });
@@ -76,35 +75,11 @@ server.listen(port, () => {
   console.log(`JSON Server is running on port ${port}`);
 });
 
-// Centralized logic
-
-// Returns a URL friendly slug
-function createSlug(value) {
-  return value
-    .replace(/[^a-z0-9_]+/gi, "-")
-    .replace(/^-|-$/g, "")
-    .toLowerCase();
-}
-
 function validateCampaign(campagin) {
   if (!campagin.name) return "Name of campaign is required.";
-  // if (!campagin.createdOn) return "Region of campaign is required.";
   if (!campagin.region) return "Region of campaign is required.";
-  // if (!campagin.price) return "Title is required.";
+  if (!campagin.price) return "Price is required.";
   if (!campagin.date) return "Date of campaign is required.";
-  // if (!campagin.image_url) return "Category is required.";
+  if (!campagin.image_url) return "Image url is required.";
   return "";
 }
-
-// name: "Mole Slayer",
-// region: "FR",
-// createdOn: 1559806711124,
-// price: {
-//   monthly: 150.0,
-//   halfyearly: 700.0,
-//   yearly: 1200.0,
-// },
-// csv: "Some CSV link for Mole Slayer",
-// report: "Some report link for Mole Slayer",
-// image_url: "Some image url of the campaign",
-// date: "07-06-2020",
