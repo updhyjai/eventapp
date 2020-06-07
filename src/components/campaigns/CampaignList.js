@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Calender from "react-calendar";
 import "react-calendar/dist/Calendar.css";
+import "./CampaignList.css";
 import "./ReactCalender.css";
 import priceImage from "../../images/table/price.png";
 import calendarImage from "../../images/table/calendar.png";

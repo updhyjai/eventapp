@@ -88,7 +88,6 @@ class App extends React.PureComponent {
                   <CampaignPage
                     campaignData={this.state.upcomingEvents}
                     handleScheduleUpdate={this.onScheduleUpdate}
-                    // redirectTo={this.state.redirectTo}
                   />
                 )}
               />
@@ -99,7 +98,6 @@ class App extends React.PureComponent {
                   <CampaignPage
                     campaignData={this.state.liveEvents}
                     handleScheduleUpdate={this.onScheduleUpdate}
-                    // redirectTo={this.state.redirectTo}
                   />
                 )}
               />
@@ -110,7 +108,6 @@ class App extends React.PureComponent {
                   <CampaignPage
                     campaignData={this.state.pastEvents}
                     handleScheduleUpdate={this.onScheduleUpdate}
-                    // redirectTo={this.state.redirectTo}
                   />
                 )}
               />

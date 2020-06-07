@@ -1,0 +1,52 @@
+.table {
+  margin-top: 30px;
+  border: 2px solid #f0f0f0;
+}
+
+.table-head {
+  background-color: #f0f0f0;
+  color: #597592;
+}
+.campaign-date-td {
+  width: 150px;
+}
+.campaign-name-td {
+  /* display: flex; */
+  /* align-items: center; */
+  width: 250px;
+}
+td.campaign-name-td {
+  display: flex;
+}
+.campaign-date-td p,
+.campaign-name-td p {
+  margin: 0px;
+  font-style: italic;
+  font-size: small;
+  color: gray;
+}
+.campaign-image {
+  width: 50px;
+}
+.campaign-name-td h6,
+.campaign-date-td h6 {
+  color: #597592;
+  /* font-size: small; */
+  font-weight: normal;
+}
+
+.action-button {
+  background: none;
+  border: none;
+  /* margin-right: 50px; */
+}
+
+.action-image {
+  width: 25px;
+}
+
+.action-name {
+  font-size: smaller;
+  color: gray;
+  margin-left: 5px;
+}

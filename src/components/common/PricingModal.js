@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Modal from "react-responsive-modal";
+import "./PriceModal.css";
 
 PricingModal.propTypes = {
   isOpen: PropTypes.bool.isRequired,
