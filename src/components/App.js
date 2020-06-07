@@ -1,14 +1,13 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import Header from "./common/Header";
 import PageNotFound from "./PageNotFound";
 // eslint-disable-next-line import/no-named-as-default
 import CampaignPage from "./campaigns/CampaignPage";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import { getCampaigns, updateCampaign } from "../api/eventsApi";
 import { filterCampaignData } from "../utils/helper";
 import Spinner from "./common/Spinner";
+import AppBar from "./common/AppBar";
+import NavBar from "./common/NavBar";
 
 class App extends React.PureComponent {
   state = {
@@ -26,7 +25,6 @@ class App extends React.PureComponent {
 
   componentDidMount() {
     this.callAndWait(this.getCampaignData);
-    // this.onScheduleUpdate();
   }
   getCampaignData = () => {
     getCampaigns()
@@ -71,19 +69,17 @@ class App extends React.PureComponent {
     this.callAndWait(this.updateCampaignData, campaignData);
   };
 
-  componentDidUpdate() {
-    console.log("I am in update");
-  }
-
   render() {
     console.log(this.state.apiCallInProgress);
     return (
-      <>
-        <div className="container-fluid">
-          <Header />
-          {this.state.apiCallInProgress ? (
-            <Spinner />
-          ) : (
+      <div className="container-fluid">
+        <AppBar />
+        {this.state.apiCallInProgress ? (
+          <Spinner />
+        ) : (
+          <>
+            <NavBar />
+            <br />
             <Switch>
               <Route
                 exact
@@ -121,10 +117,9 @@ class App extends React.PureComponent {
 
               <Route component={PageNotFound} />
             </Switch>
-          )}
-          <ToastContainer autoClose={3000} />
-        </div>
-      </>
+          </>
+        )}
+      </div>
     );
   }
 }

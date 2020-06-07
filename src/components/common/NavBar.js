@@ -1,9 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { PATH } from "../../utils/constants";
-import appLogo from "./appLogo.png";
 
-const Header = () => {
+const NavBar = () => {
   const activeStyle = {
     color: "#7AC269",
     background: "white",
@@ -13,13 +12,6 @@ const Header = () => {
 
   return (
     <div>
-      <header className="navbar fixed-top navbar-dark bg-dark">
-        <div className="navbar-brand" href="#">
-          <span>
-            <img className="app-logo" src={appLogo} />
-          </span>
-        </div>
-      </header>
       <h1 className="heading">Manage Campaigns</h1>
       <nav>
         <ul className="nav nav-pills">
@@ -57,4 +49,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default NavBar;
