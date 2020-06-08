@@ -4,7 +4,7 @@ import Calender from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import "./CampaignList.css";
 import "./ReactCalender.css";
-import priceImage from "../../images/table/price.png";
+import priceImage from  "../../images/table/price.png";
 import calendarImage from "../../images/table/calendar.png";
 import reportImage from "../../images/table/report.png";
 import fileImage from "../../images/table/file.png";
