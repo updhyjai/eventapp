@@ -1,6 +1,7 @@
 import { handleResponse, handleError } from "./apiUtils";
 const baseUrl = process.env.API_URL + "/events/";
-
+// const baseUrl =
+//   "https://my-json-server.typicode.com/updhyjai/campaignserver/events";
 export function getCampaigns() {
   return fetch(baseUrl).then(handleResponse).catch(handleError);
 }
